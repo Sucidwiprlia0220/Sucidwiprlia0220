@@ -1,0 +1,74 @@
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int data;
+    Node *next;
+};
+
+int main() {
+    Node *HEAD = NULL;
+    // ...
+}
+void pushHead(struct Node head, int new_data) {
+    struct Node *new_node = (struct Node*)(sizeof(struct Node));
+    new_Node->data = new_data;
+    New_Node->next =(*head);
+    (*head) = New_Node;
+}
+void printList(struct Node *node) {
+    while (node != NULL) {
+        printf("%d ", node->data);
+        node = node->next;
+    }
+}
+void tambahData(Node head) {
+    // ...
+}
+
+void displayData(Node *head) {
+    Node *temp = head;
+    if (temp == NULL) {
+        cout << "LinkedList masih kosong" << endl;
+        return;
+        // Traversal sampai node terakhir
+        while (temp != NULL) {
+            cout << temp->data << " ";
+            temp = temp->next;
+            cout << endl;
+        }
+}
+void menuPilihan() {
+    int pilihan;
+    while (true) {
+        cout << "======= MENU =======" << endl;
+        cout << "1. Tambah data" << endl;
+        cout << "2. Ubah data" << endl;
+        cout << "3. Hapus data" << endl;
+        cout << "4. Tampil data" << endl;
+        cout << "9. Exit program" << endl;
+        cout << "Masukan pilihan : ";
+        cin >> pilihan;
+        switch (pilihan) {
+            case 1:
+                tambahData(HEAD);
+                break;
+            case 2:
+                // ...
+                break;
+            case 3:
+                // ...
+                break;
+            case 4:
+                displayData(HEAD);
+                break;
+            case 9:
+                return;
+            default:
+                cout << "Pilihan tidak ada" << endl;
+                break;
+        }
+    }
+}
+
+
